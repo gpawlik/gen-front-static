@@ -9,8 +9,8 @@ const { remoteRoot, remoteDist, remoteDistOld } = config;
 
 ftpClient.on('ready', () => {
   ftpClient.mkdir(remoteRoot, () => {
-    ftpDeploy.deploy(config, function (err) {
-      if (err) console.log(err);
+    ftpDeploy.deploy(config, e => {
+      if (e) console.log(e);
       else {
         console.log('Files uploaded.');
         ftpClient.rename(remoteDist, remoteDistOld, () => {
@@ -27,6 +27,10 @@ ftpClient.on('ready', () => {
 
 ftpClient.on('close', () => {
   console.log('Connection closed');
+});
+
+ftpClient.on('error', e => {
+  console.log('Connection error', e);
 });
 
 ftpClient.connect(config);
