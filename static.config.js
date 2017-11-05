@@ -26,6 +26,9 @@ export default {
       }
     ];
   },
+
+  siteRoot: 'http://localhost:3000',
+
   Html: class CustomHtml extends Component {
     render() {
       const { Html, Head, Body, children } = this.props;
