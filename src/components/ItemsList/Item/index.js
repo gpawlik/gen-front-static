@@ -5,10 +5,10 @@ import Container from './Container';
 import Title from './Title';
 import Image from './Image';
 
-const Item = ({ id, title, imageUrl }) => {
+const Item = ({ slug, title, imageUrl }) => {
   return (
     <div>
-      <Container to={`/post/${id}`}>
+      <Container to={`/p/${slug}`}>
         <Image src={imageUrl} />
         <Title>{title}</Title>
       </Container>

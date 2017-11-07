@@ -9,25 +9,23 @@ const PostMeta = ({ commentsNumber, date = Date.now() }) => {
   return (
     <MetaBox>
       <MetaItem>
-        <FormattedRelative
-          value={date}
-        />
+        <FormattedRelative value={date} />
       </MetaItem>
-      <MetaItem>
-        <FormattedMessage
-          id="comments"
-          defaultMessage={
-            `{commentsCount, number}
-            {
-              commentsCount,
-              plural,
-              one {comment}
-              other {comments}
-            }`
-          }
-          values={{commentsCount: commentsNumber}}
-        />
-      </MetaItem>
+      {false && (
+        <MetaItem>
+          <FormattedMessage
+            id="comments"
+            defaultMessage={`{commentsCount, number}
+              {
+                commentsCount,
+                plural,
+                one {comment}
+                other {comments}
+              }`}
+            values={{ commentsCount: commentsNumber }}
+          />
+        </MetaItem>
+      )}
     </MetaBox>
   );
 };

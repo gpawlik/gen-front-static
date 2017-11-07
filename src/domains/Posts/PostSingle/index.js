@@ -3,21 +3,15 @@ import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
 import { fetchSingle } from './actions';
-import {
-  selectCurrentPost,
-  selectIsLoading
-} from './selector';
+import { selectIsLoading } from './selector';
 
 import Content from './Content';
 import Preloader from 'components/Preloader';
+import { withHeader } from 'utils/withHeader';
 
 export class Post extends Component {
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    // this.props.onPostFetch(this.props.match.params.id);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -40,7 +34,6 @@ export class Post extends Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  // currentPost: selectCurrentPost(),
   isLoading: selectIsLoading()
 });
 
@@ -52,4 +45,4 @@ export const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Post);
+export default connect(mapStateToProps, mapDispatchToProps)(withHeader(Post));

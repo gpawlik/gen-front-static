@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { fetch } from './actions';
 import { selectPosts, selectIsLoading } from './selector';
+import { withHeader } from 'utils/withHeader';
 
 import ItemsList from 'components/ItemsList/List';
 import Splash from 'components/Splash';
@@ -50,4 +51,6 @@ export const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostList);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  withHeader(PostList)
+);

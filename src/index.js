@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-
 // Your top level component
 import App from './domains/App';
 
@@ -19,7 +18,7 @@ if (typeof document !== 'undefined') {
       <AppContainer>
         <Comp />
       </AppContainer>,
-      document.getElementById('root'),
+      document.getElementById('root')
     );
   };
 
@@ -28,8 +27,8 @@ if (typeof document !== 'undefined') {
 
   // Hot Module Replacement
   if (module.hot) {
-    module.hot.accept('./App', () => {
-      render(require('./App').default);
+    module.hot.accept('./domains/App', () => {
+      render(require('./domains/App').default);
     });
   }
 }

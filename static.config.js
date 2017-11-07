@@ -7,7 +7,9 @@ export default {
     title: 'React Static'
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('http://y.gpawlik.com/wp-json/wp/v2/posts');
+    const { data: posts } = await axios.get(
+      'http://y.gpawlik.com/wp-json/wp/v2/posts'
+    );
 
     return [
       {
@@ -17,7 +19,7 @@ export default {
           posts
         }),
         children: posts.map(post => ({
-          path: `/post/${post.id}`,
+          path: `/p/${post.slug}`,
           component: 'src/domains/Posts/PostSingle',
           getProps: () => ({
             post
@@ -40,10 +42,16 @@ export default {
       return (
         <Html>
           <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
             {styleTags}
           </Head>
-          <Body>{newChildren}</Body>
+          <Body>
+            <div />
+            {newChildren}
+          </Body>
         </Html>
       );
     }
