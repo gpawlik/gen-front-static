@@ -29,7 +29,7 @@ export default {
     ];
   },
 
-  siteRoot: 'http://localhost:3000',
+  siteRoot: 'http://gf.gpawlik.com',
 
   Html: class CustomHtml extends Component {
     render() {
