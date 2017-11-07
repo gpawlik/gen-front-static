@@ -6,14 +6,14 @@ import { LogoIcon } from 'components/Icons';
 import Logo from 'components/Logo';
 import SocialBox from 'components/Social';
 
-const Header = () => {
+const Header = ({ slug, text }) => {
   return (
     <Container>
       <Wrapper>
         <Logo to="/">
           <LogoIcon />
         </Logo>
-        <SocialBox />
+        <SocialBox slug={slug} text={text} />
       </Wrapper>
     </Container>
   );

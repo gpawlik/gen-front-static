@@ -7,7 +7,6 @@ import { selectIsLoading } from './selector';
 
 import Content from './Content';
 import Preloader from 'components/Preloader';
-import { withHeader } from 'utils/withHeader';
 
 export class Post extends Component {
   constructor(props) {
@@ -45,4 +44,4 @@ export const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withHeader(Post));
+export default connect(mapStateToProps, mapDispatchToProps)(Post);

@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import { fetch } from './actions';
 import { selectPosts, selectIsLoading } from './selector';
-import { withHeader } from 'utils/withHeader';
 
+import Header from 'components/Header';
 import ItemsList from 'components/ItemsList/List';
 import Splash from 'components/Splash';
 import Preloader from 'components/Preloader';
@@ -26,11 +26,12 @@ export class PostList extends Component {
   }
 
   render() {
-    const { posts, isLoading } = this.props;
+    const { isLoading } = this.props;
 
     return (
       <Grid>
         {isLoading && <Preloader />}
+        <Header />
         <Splash />
         <ItemsList />
       </Grid>
@@ -51,6 +52,4 @@ export const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  withHeader(PostList)
-);
+export default connect(mapStateToProps, mapDispatchToProps)(PostList);
