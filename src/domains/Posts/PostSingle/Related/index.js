@@ -13,13 +13,13 @@ export class RelatedPosts extends Component {
   }
 
   handlePostNavigation(event) {
-    const { prevId, nextId, history } = this.props;
+    const { prevSlug, nextSlug, history } = this.props;
     const { keyCode } = event;
 
-    if (keyCode === 37 && nextId) {
-      history.push(`/post/${nextId}`);
-    } else if (keyCode === 39 && prevId) {
-      history.push(`/post/${prevId}`);
+    if (keyCode === 37 && nextSlug) {
+      history.push(`/p/${nextSlug}`);
+    } else if (keyCode === 39 && prevSlug) {
+      history.push(`/p/${prevSlug}`);
     }
   }
 
@@ -32,21 +32,21 @@ export class RelatedPosts extends Component {
   }
 
   render() {
-    const { prevId, prevTitle, nextId, nextTitle } = this.props;
+    const { prevSlug, prevTitle, nextSlug, nextTitle } = this.props;
 
     return (
       <Container>
-        {nextId && (
+        {nextSlug && (
           <ItemBox>
-            <Item to={`/post/${nextId}`}>
+            <Item to={`/p/${nextSlug}`}>
               <span>Previous Story</span>
               {nextTitle}
             </Item>
           </ItemBox>
         )}
-        {prevId && (
+        {prevSlug && (
           <ItemBox>
-            <Item to={`/post/${prevId}`} align="left">
+            <Item to={`/p/${prevSlug}`} align="left">
               <span>Next Story</span>
               {prevTitle}
             </Item>

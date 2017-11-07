@@ -46,9 +46,9 @@ const Content = getRouteProps(
             />
           </Container>
           <Related
-            prevId={prevPost.id}
+            prevSlug={prevPost.slug}
             prevTitle={prevPost.title}
-            nextId={nextPost.id}
+            nextSlug={nextPost.slug}
             nextTitle={nextPost.title}
           />
         </FlexItem>
