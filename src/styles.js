@@ -41,7 +41,10 @@ injectGlobal`
 
   @media(max-width: 679px) {
     .post-content p {
-      font-size: 19px;
+      font-size: 18px;
+    }
+    .post-content blockquote {
+      margin: 0 20px;
     }
   }
 `;
