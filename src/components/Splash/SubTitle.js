@@ -9,6 +9,7 @@ const Container = styled.h3`
   font-weight: 300;
   font-style: italic;
   font-family: serif;
+  padding: 20px 20px 0;
 `;
 
 export default Container;

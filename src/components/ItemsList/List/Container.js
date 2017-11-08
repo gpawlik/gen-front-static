@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   margin: 0 auto;
-  padding: 75px 0;
+  padding-bottom: 75px;
   list-style-type: none;
   width: 100%;
   position: relative;

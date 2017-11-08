@@ -10,11 +10,14 @@ const Splash = () => {
     <Container>
       <div>
         <Title>
-          Generation <LogoIcon width={80} height={80} style={{ position: 'relative', bottom: '-15px' }} />
+          Generation{' '}
+          <LogoIcon
+            width={80}
+            height={80}
+            style={{ position: 'relative', bottom: '-15px' }}
+          />
         </Title>
-        <SubTitle>
-          All great adventures start with why
-        </SubTitle>
+        <SubTitle>All the great adventures start with why</SubTitle>
       </div>
     </Container>
   );

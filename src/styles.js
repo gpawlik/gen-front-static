@@ -31,11 +31,17 @@ injectGlobal`
     font-weight: 400;
     color: rgba(0, 0, 0, .84);
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
   }
   .post-content img {
     width: 100%;
     height: auto;
     display: none;
+  }
+
+  @media(max-width: 679px) {
+    .post-content p {
+      font-size: 19px;
+    }
   }
 `;
