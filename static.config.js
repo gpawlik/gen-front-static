@@ -29,7 +29,7 @@ export default {
     ];
   },
 
-  siteRoot: 'http://gf.gpawlik.com',
+  siteRoot: 'http://generation-y.org',
 
   Html: class CustomHtml extends Component {
     render() {
