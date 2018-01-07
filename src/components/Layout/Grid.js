@@ -21,13 +21,13 @@ const Grid = styled.div`
 
   &:before {
     left: 0;
-    transform: translateX(33%);
+    transform: translateX(33.333333%);
     border-left: 1px solid ${colors.DOVE_GRAY};
   }
 
   &:after {
     right: 0;
-    transform: translateX(-33%);
+    transform: translateX(-33.33333%);
     border-right: 1px solid ${colors.DOVE_GRAY};
   }
 `;
