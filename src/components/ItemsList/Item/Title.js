@@ -4,7 +4,7 @@ import { colors } from 'variables';
 import { media } from 'utils/style';
 
 const Title = styled.h3`
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 130%;
   color: ${colors.WHITE};
@@ -21,7 +21,7 @@ const Title = styled.h3`
   text-align: center;
 
   ${media.tablet`
-    font-size: 25px:
+    font-size: 30px;
   `};
 `;
 

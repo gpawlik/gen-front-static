@@ -7,12 +7,10 @@ import Image from './Image';
 
 const Item = ({ slug, title, imageUrl }) => {
   return (
-    <div>
-      <Container to={`/p/${slug}`}>
-        <Image src={imageUrl} />
-        <Title>{title}</Title>
-      </Container>
-    </div>
+    <Container to={`/p/${slug}`}>
+      <Image src={imageUrl} />
+      <Title>{title}</Title>
+    </Container>
   );
 };
 

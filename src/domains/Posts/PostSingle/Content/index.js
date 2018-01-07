@@ -6,7 +6,7 @@ import { getRouteProps } from 'react-static';
 import Header from 'components/Header';
 import Container from './Container';
 import Title from './Title';
-import ImageBox from './ImageBox';
+import Image from './Image';
 import PostMeta from 'domains/Posts/PostSingle/PostMeta';
 import Related from 'domains/Posts/PostSingle/Related';
 import Flex from 'components/Layout/Flex';
@@ -20,7 +20,8 @@ const Content = getRouteProps(
       excerpt,
       content,
       date,
-      featuredImageUrl,
+      featuredImageUrlMedium,
+      featuredImageUrlSmall,
       prevPost = {},
       nextPost = {}
     }
@@ -34,7 +35,10 @@ const Content = getRouteProps(
         </Helmet>
         <Header slug={slug} text={title} />
         <FlexItem>
-          <ImageBox src={featuredImageUrl} />
+          <Image
+            src={featuredImageUrlMedium}
+            srcThumbnail={featuredImageUrlSmall}
+          />
         </FlexItem>
         <FlexItem>
           <Container>

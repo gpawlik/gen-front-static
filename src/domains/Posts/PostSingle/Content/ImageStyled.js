@@ -1,7 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { media } from 'utils/style';
 
+const sharpen = keyframes`
+    from {
+      background-image: blur(15px));
+    }
+    to {
+      background-image: blur(0px));
+    }
+  }`;
 /*
 const grain = keyframes`
   0%, 100% {
@@ -71,7 +79,9 @@ const ImageBox = styled.div`
   height: 100%;
   position: fixed;
   background-color: #eee;
-  background-image: ${({ src }) => src ? `url(${src})` : ''};
+  background-image: ${({ isLight, src, srcThumbnail }) => {
+    return isLight ? `url(${srcThumbnail})` : `url(${src})`
+  }};
   background-size: cover;
   background-position: center;
   top: 0;
@@ -79,6 +89,9 @@ const ImageBox = styled.div`
   right: 50%;
   bottom: 0;
   overflow: hidden;
+  filter: ${({ isLight }) => isLight ? `blur(15px)` : `blur(0px)` };
+  animation: ${({ isLight }) => !isLight ? 'sharpen 10s' : '' };
+  transform: translateZ(0);
 
   ${media.tablet`
     position: relative;
