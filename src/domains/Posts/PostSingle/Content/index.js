@@ -31,9 +31,9 @@ const Content = getRouteProps(
         <Helmet>
           <meta charSet="utf-8" />
           <title>Generation Y | {title}</title>
-          <og:title>Generation Y | {title}</og:title>
-          <og:description>{excerpt}</og:description>
-          <og:image>{featuredImageUrlMedium}</og:image>
+          <meta property="og:title" content={`Generation Y | ${title}`} />
+          <meta property="og:description" content={excerpt} />
+          <meta property="og:title" content={featuredImageUrlMedium} />
         </Helmet>
         <Header slug={slug} text={title} />
         <FlexItem>
