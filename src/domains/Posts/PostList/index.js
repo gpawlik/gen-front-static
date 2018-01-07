@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 import { fetch } from './actions';
 import { selectPosts, selectIsLoading } from './selector';
@@ -30,6 +31,11 @@ export class PostList extends Component {
 
     return (
       <Grid>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Generation Y</title>
+          <description>All The Great Adventures Start With Why</description>
+        </Helmet>
         {isLoading && <Preloader />}
         <Header />
         <Splash />
