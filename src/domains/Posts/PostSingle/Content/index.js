@@ -32,7 +32,7 @@ const Content = getRouteProps(
           <meta charSet="utf-8" />
           <title>Generation Y | {title}</title>
           <meta property="og:title" content={`Generation Y | ${title}`} />
-          <meta property="og:description" content={`${excerpt}`} />
+          <meta property="og:description" content={`${excerpt.rendered}`} />
           <meta property="og:image" content={featuredImageUrlMedium} />
         </Helmet>
         <Header slug={slug} text={title} />
