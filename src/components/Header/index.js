@@ -1,19 +1,18 @@
 import React from 'react';
 
-import Container from './Container';
-import Wrapper from './Wrapper';
 import { LogoIcon } from 'components/Icons';
 import Logo from 'components/Logo';
 import SocialBox from 'components/Social';
+import { Container, Wrapper } from './styles';
 
-const Header = ({ slug, text }) => {
+const Header = () => {
   return (
     <Container>
       <Wrapper>
         <Logo to="/">
           <LogoIcon />
         </Logo>
-        <SocialBox slug={slug} text={text} />
+        <SocialBox />
       </Wrapper>
     </Container>
   );
