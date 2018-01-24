@@ -35,6 +35,14 @@ export class PostList extends Component {
           <meta charSet="utf-8" />
           <title>Generation Y</title>
           <description>All The Great Adventures Start With Why</description>
+          <meta
+            property="og:title"
+            content="All The Great Adventures Start With Why"
+          />
+          <meta
+            property="og:description"
+            content="Changement de vie ou simple changement de direction, ils se posent des questions, font des choix, prennent des décisions, ont des doutes, des peurs, vivent des joies, des déceptions ou des satisfactions. Le tout, poussé par une raison primordiale : être en phase avec eux mêmes et leurs aspirations."
+          />
         </Helmet>
         {isLoading && <Preloader />}
         <Header />
