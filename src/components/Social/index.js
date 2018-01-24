@@ -3,18 +3,18 @@ import React from 'react';
 import Container from './Container';
 import SocialItem from './SocialItem';
 
-import socialShare from 'utils/socialShare';
-
-const Header = ({ slug, text }) => {
+const Header = () => {
   return (
     <Container>
       <SocialItem
         type="facebook"
-        onClick={() => socialShare('fb', slug, text)}
+        onClick={() =>
+          window.open('https://www.facebook.com/whygeneration/', '_blank')}
       />
       <SocialItem
         type="twitter"
-        onClick={() => socialShare('tw', slug, text)}
+        onClick={() =>
+          window.open('https://twitter.com/GenerationYwhy', '_blank')}
       />
     </Container>
   );
