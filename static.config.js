@@ -42,6 +42,7 @@ export default {
       return (
         <Html>
           <Head>
+            <meta charSet="utf-8" />
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"
@@ -70,6 +71,11 @@ export default {
               color="#5bbad5"
             />
             <meta name="theme-color" content="#ffffff" />
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=UA-113029819-1"
+            />
+            <script src="http://api.generation-y.org/wp-content/ga.js" />
             {styleTags}
           </Head>
           <Body>{newChildren}</Body>
