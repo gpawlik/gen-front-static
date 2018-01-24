@@ -20,6 +20,10 @@ export class Post extends Component {
     window.scrollTo(0, 0);
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { isLoading } = this.props;
 
